@@ -33,6 +33,14 @@ class BeersViewModel(application: Application) : AndroidViewModel(application) {
         repository.insert(beer)
     }
 
+    fun update(beer: Beer) = scope.launch( Dispatchers.IO){
+        repository.update(beer)
+    }
+
+    fun delete(beer: Beer) = scope.launch(Dispatchers.IO){
+        repository.delete(beer)
+    }
+
     override fun onCleared() {
         super.onCleared()
         parentJob.cancel()

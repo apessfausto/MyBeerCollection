@@ -1,9 +1,7 @@
 package br.com.apess.jatomei.db
 
 import android.arch.lifecycle.LiveData
-import android.arch.persistence.room.Dao
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.Query
+import android.arch.persistence.room.*
 
 @Dao
 interface BeerDAO {
@@ -11,9 +9,18 @@ interface BeerDAO {
     @Insert
     fun insert(beer: Beer)
 
-    @Query("DELETE FROM beer_table")
-    fun deleteAll()
+    @Update
+    fun update(beer: Beer)
 
-    @Query("SELECT * FROM beer_table")
+    @Delete
+    fun delete(beer: Beer)
+
+  //  @Query("DELETE FROM beer_table")
+   // fun deleteAll()
+
+    @Query("SELECT * FROM beer_table ORDER BY txtNome ASC")
     fun getAll(): LiveData<List<Beer>>
+
+    @Query("SELECT * from beer_table WHERE id = :id")
+    fun getBeer(id: Long): LiveData<Beer>
 }

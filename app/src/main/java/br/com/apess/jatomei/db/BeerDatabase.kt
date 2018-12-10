@@ -11,7 +11,7 @@ import kotlinx.coroutines.IO
 import kotlinx.coroutines.launch
 
 
-@Database(entities = [Beer::class], version = 2)
+@Database(entities = [Beer::class], version = 6)
 abstract class BeerDatabase : RoomDatabase() {
 
     abstract fun beerDAO(): BeerDAO
@@ -26,7 +26,7 @@ abstract class BeerDatabase : RoomDatabase() {
                 val instance: BeerDatabase = Room.databaseBuilder(
                     context.applicationContext,
                     BeerDatabase::class.java,
-                    "beer-Database"
+                    "beer-database"
                 )
 
                     .fallbackToDestructiveMigration()

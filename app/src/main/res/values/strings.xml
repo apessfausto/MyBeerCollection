@@ -15,9 +15,11 @@
     <string name="camera">Camera</string>
     <string name="apresentacao">O App My Beer Collection, foi desenvolvido pelo estudande de Analise e Desenvolvimento
         de Sistemas, Fausto Mefistófeles, criador e apreciador de cervejas artesanais e autor do perfil do Instagram e
-        Facebook Cozinha Brewer. O app tem como objetivo realizar o registro das cervejas degustadas, onde o usuário pode
+        Facebook Cozinha Brewer. O app tem como objetivo realizar o registro das cervejas degustadas, onde o usuário
+        pode
         registrar suas observações e imagem da cerveja apreciada.
     </string>
     <string name="face">Face</string>
     <string name="insta">Insta</string>
+    <string name="mnExcluir">Excluir</string>
 </resources>
